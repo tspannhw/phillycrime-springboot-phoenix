@@ -7,8 +7,6 @@ import javax.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.social.twitter.api.Tweet;
-import org.springframework.social.twitter.api.TwitterProfile;
 import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -38,24 +36,7 @@ public class DataController {
 
 	@Autowired
 	private DataSourceService dataSourceService;
-	
-    private static final String twitterView = "Twitter User: %s";
-   
-    @Autowired
-    private TwitterService twitterService;
 
- @RequestMapping(value = "/timeline/{twitterUser}")
- public List<Tweet> getUserTimeline(@PathVariable String twitterUser) {
- 	String inputValue = String.format(twitterView, twitterUser);
-	logger.error(inputValue);
-    return twitterService.getUserTimeline(twitterUser);
- }
-
-    @RequestMapping(value = "/profile/{twitterUser}")
-    public TwitterProfile getUserProfile(@PathVariable String twitterUser) {
-        return twitterService.getUserProfile(twitterUser);
-    }
-    
     @RequestMapping("/query/{query}")
     public List<PhillyCrime> query(
     		@PathVariable(value="query") String query) 

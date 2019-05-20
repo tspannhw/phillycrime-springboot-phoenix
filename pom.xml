@@ -22,6 +22,13 @@
 		<java.version>1.8</java.version>
 	</properties>
 
+ <repositories>
+    <repository>
+      <id>Hortonworks</id>
+      <name>Hortonworks</name>
+      <url>http://repo.hortonworks.com/content/repositories/releases/</url>
+    </repository>
+  </repositories>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -31,7 +38,7 @@
    <dependency>
     <groupId>org.apache.phoenix</groupId>
     <artifactId>phoenix-core</artifactId>
-<version>4.4.0-HBase-1.0</version>
+    <version>5.0.0.3.1.0.0-78</version>
                <exclusions>
                                 <exclusion>
                                         <artifactId>slf4j-log4j12</artifactId>
@@ -104,7 +111,7 @@
 		<dependency>
 			<groupId>org.apache.hadoop</groupId>
 			<artifactId>hadoop-client</artifactId>
-			<version>2.7.1</version>
+			<version>3.1.0</version>
 			<type>jar</type>
 			<exclusions>
 				<exclusion>
@@ -124,10 +131,6 @@
                                         <artifactId>servlet-api-2.5</artifactId>
                                 </exclusion>
 			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-social-twitter</artifactId>
 		</dependency>
 
 		<dependency>
@@ -192,6 +195,5 @@
 			</plugin>
 		</plugins>
 	</build>
-
 
 </project>

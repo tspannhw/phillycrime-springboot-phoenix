@@ -27,10 +27,7 @@ Query: <input type="text" id="query" name="query" value=""> <input type="submit"
 </p>
 <br clear="all"/> <p align="center">
     <div class="white-frame" id="tweets" ng-app ng-controller="PostsCtrlAjax"  style="align: center;overflow:auto;height:300px;width:800px">
-<b>Recent Philadelphia Police Tweets:</b><br><p>
-<div ng-repeat="post in posts">
-<div class='time'>{{post.createdAt | date:'yyyy-MM-dd HH:mm:ss Z'}}</div> -  {{post.text}} <br></div>
-</div>
+
 </p>
 <script language="javascript">
 var myApp = angular.module('myApp',['ngAtp']);
@@ -44,15 +41,6 @@ function getQueryString() {
   }
 
   return result;
-}
-
-
-function PostsCtrlAjax($scope, $http)
-{
-	$http({method: 'GET', url: '/timeline/PhillyPolice'}).success(function(data)
-	{
-		$scope.posts = data; // response data 
-	});
 }
 
 function MyCtrl($scope, $http) 
@@ -74,7 +62,7 @@ function MyCtrl($scope, $http)
 <br><br>
 <p>
 
-    &copy; 2016
+    &copy; 2019
 
 
 </body>

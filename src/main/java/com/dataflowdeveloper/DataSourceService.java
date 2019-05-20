@@ -44,15 +44,16 @@ public class DataSourceService {
 			logger.error("Limit:" + querylimit);
 			if ( connection == null ) { 
 				logger.error("Null connection");
+
 				return crimes;
 			}
 			if ( query == null || query.trim().length() <= 0 ) { 
 				query = "";
-				sql = "select * from phillycrime";
+				sql = "select * from PHILLYCRIME";
 			}
 			else {
 				query = "%" + query.toUpperCase() + "%";
-				sql = "select * from phillycrime WHERE upper(text_general_code) like ? LIMIT ?";
+				sql = "select * from PHILLYCRIME WHERE upper(text_general_code) like ? LIMIT ?";
 			}
 
 			PreparedStatement ps = connection
@@ -80,10 +81,8 @@ public class DataSourceService {
 
 			res.close();
 			ps.close();
-			connection.close();
 			res = null;
 			ps = null;
-			connection = null;
 			crime = null;
 
 			logger.error("Size=" + crimes.size());

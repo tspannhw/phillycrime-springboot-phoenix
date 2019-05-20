@@ -14,8 +14,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
-import org.springframework.social.twitter.api.Twitter;
-import org.springframework.social.twitter.api.impl.TwitterTemplate;
+import org.apache.phoenix.jdbc.PhoenixDriver;
 
 @Configuration
 @ComponentScan
@@ -32,45 +31,20 @@ public class HBaseApplication {
 	static class LocalConfiguration {
 		Logger logger = LoggerFactory.getLogger(LocalConfiguration.class);
 
-	    @Value("${consumerkey}")
-	    private String consumerKey;
-
-	    @Value("${consumersecret}")
-	    private String consumerSecret;
-	    
-	    @Value("${accesstoken}")
-	    private String accessToken;
-	    
-	    @Value("${accesstokensecret}")
-	    private String accessTokenSecret;
-	    	
-		@Bean
-		public Twitter twitter() {
-			Twitter twitter = null;
-			
-			try {
-				twitter = new TwitterTemplate(consumerKey, consumerSecret, accessToken, accessTokenSecret);
-			} catch (Exception e) {
-				logger.error("Error:", e);
-			}
-			
-			return twitter;
-		}
-
-	    @Value("${purl}")
+		@Value("${purl}")
 	    private String databaseUri;
 	    	    
 		@Bean
 		public Connection connection() {
 		        Connection con = null;
 				try {
+					logger.error(databaseUri);
 					con = DriverManager.getConnection(databaseUri);
-				} catch (SQLException e) {
+				} catch (Throwable e) {
 					e.printStackTrace();
 					logger.error("Connection fail: ", e);
 				}
-	
-			//dataSource.setDriverClassName("org.apache.phoenix.jdbc.PhoenixDriver");
+
 			logger.error("Initialized hbase");
 			
 			return con;

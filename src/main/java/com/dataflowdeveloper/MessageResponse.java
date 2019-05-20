@@ -1,8 +1,6 @@
 package com.dataflowdeveloper;
 
-/**
- * Created by sgupta on 11/3/14.
- */
+
 public class MessageResponse {
   private final String status;
   private final String message;
