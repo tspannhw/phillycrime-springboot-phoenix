@@ -1,0 +1,109 @@
+{
+ "type": "record",
+ "name": "PHILLYCRIME",
+ "fields": [
+  {
+   "name": "cartodb_id",
+   "type": "string",
+   "doc": "Type inferred from '\"2513323\"'"
+  },
+  {
+   "name": "the_geom",
+   "type": "string",
+   "doc": "Type inferred from '\"0101000020E61000009B2FFECF04CA52C0D3EE8080EFF94340\"'"
+  },
+  {
+   "name": "the_geom_webmercator",
+   "type": "string",
+   "doc": "Type inferred from '\"0101000020110F0000672C610B4DEA5FC1556E4BF02C895241\"'"
+  },
+  {
+   "name": "objectid",
+   "type": "string",
+   "doc": "Type inferred from '\"33869482\"'"
+  },
+  {
+   "name": "dc_dist",
+   "type": "string",
+   "doc": "Type inferred from '\"06\"'"
+  },
+  {
+   "name": "psa",
+   "type": "string",
+   "doc": "Type inferred from '\"2\"'"
+  },
+  {
+   "name": "dispatch_date_time",
+   "type": "string",
+   "doc": "Type inferred from '\"2019-05-19T00:00:00Z\"'"
+  },
+  {
+   "name": "dispatch_date",
+   "type": "string",
+   "doc": "Type inferred from '\"2019-05-19\"'"
+  },
+  {
+   "name": "dispatch_time",
+   "type": "string",
+   "doc": "Type inferred from '\"00:16:00\"'"
+  },
+  {
+   "name": "hour_",
+   "type": "string",
+   "doc": "Type inferred from '\"0\"'"
+  },
+  {
+   "name": "dc_key",
+   "type": "string",
+   "doc": "Type inferred from '\"201906023125\"'"
+  },
+  {
+   "name": "location_block",
+   "type": "string",
+   "doc": "Type inferred from '\"1000 BLOCK FILBERT ST\"'"
+  },
+  {
+   "name": "ucr_general",
+   "type": "string",
+   "doc": "Type inferred from '\"600\"'"
+  },
+  {
+   "name": "text_general_code",
+   "type": "string",
+   "doc": "Type inferred from '\"Thefts\"'"
+  },
+  {
+   "name": "point_x",
+   "type": "string",
+   "doc": "Type inferred from '\"-75.15654373\"'"
+  },
+  {
+   "name": "point_y",
+   "type": "string",
+   "doc": "Type inferred from '\"39.95262152\"'"
+  },
+  {
+   "name": "shape",
+   "type": {
+    "type": "record",
+    "name": "shape",
+    "fields": [
+     {
+      "name": "type",
+      "type": "string",
+      "doc": "Type inferred from '\"Point\"'"
+     },
+     {
+      "name": "coordinates",
+      "type": {
+       "type": "array",
+       "items": "double"
+      },
+      "doc": "Type inferred from '[-75.15654373,39.95262152]'"
+     }
+    ]
+   },
+   "doc": "Type inferred from '{\"type\":\"Point\",\"coordinates\":[-75.15654373,39.95262152]}'"
+  }
+ ]
+}
