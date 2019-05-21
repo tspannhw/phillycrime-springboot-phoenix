@@ -1,0 +1,71 @@
+{
+ "type": "record",
+ "name": "street1",
+ "fields": [
+  {
+   "name": "probability4",
+   "type": "string",
+   "doc": "Type inferred from '\"7.14%\"'"
+  },
+  {
+   "name": "probability3",
+   "type": "string",
+   "doc": "Type inferred from '\"10.56%\"'"
+  },
+  {
+   "name": "invokehttprequesturl",
+   "type": "string",
+   "doc": "Type inferred from '\"http://www.dot35.state.pa.us/public/Districts/District6/WebCams/CAM06238CM9513.jpg\"'"
+  },
+  {
+   "name": "probability2",
+   "type": "string",
+   "doc": "Type inferred from '\"12.33%\"'"
+  },
+  {
+   "name": "probability1",
+   "type": "string",
+   "doc": "Type inferred from '\"20.41%\"'"
+  },
+  {
+   "name": "executioncommandargs",
+   "type": "string",
+   "doc": "Type inferred from '\"\"'"
+  },
+  {
+   "name": "label1",
+   "type": "string",
+   "doc": "Type inferred from '\"liner\"'"
+  },
+  {
+   "name": "label2",
+   "type": "string",
+   "doc": "Type inferred from '\"bullet train\"'"
+  },
+  {
+   "name": "url",
+   "type": "string",
+   "doc": "Type inferred from '\"http://www.dot35.state.pa.us/public/Districts/District6/WebCams/CAM06238CM9513.jpg\"'"
+  },
+  {
+   "name": "label3",
+   "type": "string",
+   "doc": "Type inferred from '\"airliner\"'"
+  },
+  {
+   "name": "label4",
+   "type": "string",
+   "doc": "Type inferred from '\"container ship\"'"
+  },
+  {
+   "name": "label5",
+   "type": "string",
+   "doc": "Type inferred from '\"solar dish\"'"
+  },
+  {
+   "name": "probability5",
+   "type": "string",
+   "doc": "Type inferred from '\"5.79%\"'"
+  }
+ ]
+}
